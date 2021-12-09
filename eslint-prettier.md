@@ -65,7 +65,7 @@ npx lint-staged
 }
 ```
 
-#### .prettierrc
+#### .prettierrc.json
 ```json
 {
   "trailingComma": "es5",
