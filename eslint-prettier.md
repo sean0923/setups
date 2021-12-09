@@ -46,8 +46,6 @@ npx lint-staged
     "prettier"
   ],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "no-use-before-define":"off",
     "react/prop-types": "off",
     "import/no-anonymous-default-export": "off",
