@@ -46,7 +46,7 @@ npx lint-staged
     "prettier"
   ],
   "rules": {
-    "no-use-before-define":"off",
+    "no-use-before-define": "off",
     "react/prop-types": "off",
     "import/no-anonymous-default-export": "off",
     "no-unused-vars": "off",
