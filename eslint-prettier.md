@@ -9,15 +9,6 @@ npx husky-init && npm install
 npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier prettier lint-staged
 ```
 
-#### .husky/pre-commit
-```sh
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-tsc
-npx lint-staged
-```
-
 #### end of package.json
 ```json
   "lint-staged": {
@@ -26,6 +17,15 @@ npx lint-staged
       "eslint"
     ]
   }
+```
+
+#### .husky/pre-commit
+```sh
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+tsc
+npx lint-staged
 ```
 
 #### .eslintrc.json
