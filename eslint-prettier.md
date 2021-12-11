@@ -19,6 +19,17 @@ npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parse
   }
 ```
 
+if using jest then 
+```json
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write",
+        "**/*.{js,jsx,ts,tsx}": [
+            "eslint",
+            "jest --bail --findRelatedTests"
+        ]
+    }
+```
+
 #### .husky/pre-commit
 ```sh
 #!/bin/sh
