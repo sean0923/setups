@@ -1,6 +1,6 @@
 ### husky init
 ```sh
-npm install husky --save-dev && npx husky install
+npx husky-init && npm install
 ```
 
 ### npm install (eslint, prettier, lint-staged)
