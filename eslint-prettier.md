@@ -6,7 +6,7 @@ npx husky-init && npm install
 ### npm install (eslint, prettier, lint-staged)
 
 ```sh
-npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier prettier lint-staged eslint-plugin-react
+npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier prettier lint-staged eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 #### end of package.json
