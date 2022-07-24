@@ -149,3 +149,16 @@ export default defineConfig({
   }
 }
 ```
+
+#### vist absolute import
+npm i vite-tsconfig-paths
+https://www.npmjs.com/package/vite-tsconfig-paths
+
+```ts
+// vite.config.ts
+import tsconfigPaths from 'vite-tsconfig-paths'
+
+export default defineConfig({
+  plugins: [tsconfigPaths()],
+})
+```
