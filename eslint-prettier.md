@@ -77,3 +77,75 @@ npx lint-staged
   "arrowParens": "always"
 }
 ```
+
+#### Vitest related
+https://vitest.dev/guide/#trying-vitest-online
+
+```sh
+# with npm
+npm install -D vitest
+```
+
+```json
+{
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+  }
+}
+```
+
+```ts
+import { defineConfig } from 'vitest/config'
+
+export default defineConfig({
+  test: {
+    // ...
+  },
+})
+```
+
+https://vitest.dev/guide/in-source.html
+```ts
+// src/index.ts
+
+// the implementation
+export function add(...args: number[]) {
+  return args.reduce((a, b) => a + b, 0)
+}
+
+// in-source test suites
+if (import.meta.vitest) {
+  const { it, expect } = import.meta.vitest
+  it('add', () => {
+    expect(add()).toBe(0)
+    expect(add(1)).toBe(1)
+    expect(add(1, 2, 3)).toBe(6)
+  })
+}
+```
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vitest/config'
+
+export default defineConfig({
++ define: {
++   'import.meta.vitest': 'undefined',
++ },
+  test: {
+    includeSource: ['src/**/*.{js,ts}']
+  },
+})
+```
+
+```ts
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": [
++     "vitest/importMeta"
+    ]
+  }
+}
+```
